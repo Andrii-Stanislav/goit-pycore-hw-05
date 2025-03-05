@@ -1,6 +1,7 @@
 from typing import Callable
+from typing import Generator, Any
 
-def generator_numbers(text: str):
+def generator_numbers(text: str) -> Generator[float, str]:
     for word in text.split():
         try:
             number = float(word)
